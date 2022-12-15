@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Body from './componenets/Body';
+import Dody from './componenets/Dody';
+import { SmoothProvider } from 'react-smooth-scrolling'
+import Navbar from './componenets/Navbar';
+import Preface from './componenets/Preface';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-gradient-to-r from-[#d4d4d4] to-[#3d3d3d]">
+     <SmoothProvider skew={true}>
+      <Navbar/>
+      <Body/>
+      <Preface/>
+      <Dody/>
+      </SmoothProvider>
+     
     </div>
   );
 }
